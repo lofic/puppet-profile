@@ -20,9 +20,9 @@ class profile {
     }
 
     $pupaliases = [
-        "alias pat='puppet agent --test'",
-        "alias pcl='cat $(puppet agent --configprint classfile)'",
-        "alias prl='cat $(puppet agent --configprint resourcefile)'",
+        'alias pat=\'if [ $UID -eq 0 ]; then puppet agent --test; fi\'',
+        'alias pcl=\'if [ $UID -eq 0 ]; then cat $(puppet agent --configprint classfile); fi\'',
+        'alias prl=\'if [ $UID -eq 0 ]; then cat $(puppet agent --configprint resourcefile); fi\'',
         "alias pae='sudo -i puppet agent --configprint environment'",
     ]
 
